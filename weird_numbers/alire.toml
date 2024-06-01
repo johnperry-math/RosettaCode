@@ -1,0 +1,12 @@
+name = "weird_numbers"
+description = "solution to Rosetta Code Weird Numbers example"
+version = "0.1.0-dev"
+
+authors = ["John Perry"]
+maintainers = ["John Perry <devotus@yahoo.com>"]
+maintainers-logins = ["johnperry-math"]
+licenses = "CC-PDDC"
+website = ""
+tags = []
+
+executables = ["weird_numbers"]

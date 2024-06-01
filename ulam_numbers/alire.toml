@@ -1,0 +1,12 @@
+name = "ulam_numbers"
+description = "solution to Rosetta Code's Ulam Numbers task"
+version = "0.1.0-dev"
+
+authors = ["John Perry"]
+maintainers = ["John Perry <devotus@yahoo.com>"]
+maintainers-logins = ["johnperry-math"]
+licenses = "CC-PDDC"
+website = ""
+tags = ["rosetta", "code", "ulam", "numbers"]
+
+executables = ["ulam_numbers"]
