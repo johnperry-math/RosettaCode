@@ -9,6 +9,7 @@ outside Rosetta Code, it won't be here.
 * [Pascal Matrix generation](https://rosettacode.org/wiki/Pascal_matrix_generation#Ada)
 * [Ulam numbers](https://rosettacode.org/wiki/Ulam_numbers#Ada)
 * [Upside-down numbers](https://rosettacode.org/wiki/Upside-down_numbers#Ada)
+* [Walsh matrix](https://rosettacode.org/wiki/Walsh_matrix#Ada)
 * [Weird numbers](https://rosettacode.org/wiki/Weird_numbers#Ada)
 * [Visitor pattern](https://rosettacode.org/wiki/Visitor_pattern#Ada)
 
