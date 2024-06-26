@@ -10,6 +10,7 @@ outside Rosetta Code, it won't be here.
 * [Ulam numbers](https://rosettacode.org/wiki/Ulam_numbers#Ada)
 * [Upside-down numbers](https://rosettacode.org/wiki/Upside-down_numbers#Ada)
 * [Weird numbers](https://rosettacode.org/wiki/Weird_numbers#Ada)
+* [Visitor pattern](https://rosettacode.org/wiki/Visitor_pattern#Ada)
 
 ## Additional info
 
