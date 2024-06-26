@@ -1,0 +1,12 @@
+name = "walsh_matrices"
+description = "solution to Rosetta Code Walsh Matrices task"
+version = "0.1.0-dev"
+
+authors = ["John Perry"]
+maintainers = ["John Perry <devotus@yahoo.com>"]
+maintainers-logins = ["johnperry-math"]
+licenses = "CC-PDDC"
+website = ""
+tags = ["rosetta", "code", "walsh-matrices"]
+
+executables = ["walsh_matrices"]
