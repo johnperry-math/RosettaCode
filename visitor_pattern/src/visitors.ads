@@ -10,8 +10,8 @@ package Visitors is
 
    type Visitor is abstract tagged null record;
 
-   procedure Visit_Base
-     (Self : Visitor; Dest : Base.Base_Record'Class) is null;
+   procedure Accept_Visitor
+     (Self : Base.Base_Record; Whom : Visitor'Class) is null;
 
    procedure Visit_Body (Self : Visitor; Dest : Bodies.Body_Record'Class);
    procedure Visit_Car (Self : Visitor; Dest : Cars.Car_Record'Class);

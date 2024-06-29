@@ -4,10 +4,10 @@ with Cars;
 with Visitors;
 
 procedure Visitor_Pattern is
-   Car       : Cars.Car_Record := Cars.Initialize;
+   Car       : constant Cars.Car_Record := Cars.Initialize;
    Performer : aliased Visitors.Perform;
    Printer   : aliased Visitors.Print;
 begin
-   Car.Visit (Performer);
-   Car.Visit (Printer);
+   Car.Accept_Visitor (Performer);
+   Car.Accept_Visitor (Printer);
 end Visitor_Pattern;

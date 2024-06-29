@@ -13,6 +13,9 @@ package Wheels is
 
    type Wheel_Record is new Base.Base_Record with private;
 
+   procedure Accept_Visitor
+     (Self : Wheel_Record; Whom : Visitors.Visitor'Class);
+
    procedure Visit (Self : Wheel_Record; Visitor : Visitors.Visitor'Class);
 
    function Initialize (Name : Unbounded_String) return Wheel_Record;

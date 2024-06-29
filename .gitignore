@@ -4,3 +4,4 @@
 /config/
 *.o
 *.ali
+interfaces/*

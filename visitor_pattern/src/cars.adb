@@ -9,15 +9,16 @@ package body Cars is
    subtype Unbounded_String is Ada.Strings.Unbounded.Unbounded_String;
    use all type Unbounded_String;
 
-   procedure Visit (Self : Car_Record; Visitor : Visitors.Visitor'Class) is
+   procedure Accept_Visitor (Self : Car_Record; Whom : Visitors.Visitor'Class)
+   is
    begin
-      Visitor.Visit_Car (Self);
-      Visitor.Visit_Body (Self.Bod);
-      Visitor.Visit_Engine (Self.Eng);
+      Whom.Visit_Car (Self);
+      Whom.Visit_Body (Self.Bod);
+      Whom.Visit_Engine (Self.Eng);
       for Wheel of Self.Whs loop
-         Visitor.Visit_Wheel (Wheel);
+         Whom.Visit_Wheel (Wheel);
       end loop;
-   end Visit;
+   end Accept_Visitor;
 
    function Initialize return Car_Record is
       Result : Car_Record;

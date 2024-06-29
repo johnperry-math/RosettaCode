@@ -4,6 +4,13 @@ with Visitors;
 
 package body Wheels is
 
+   procedure Accept_Visitor
+     (Self : Wheel_Record; Whom : Visitors.Visitor'Class)
+   is
+   begin
+      Whom.Visit_Wheel (Self);
+   end Accept_Visitor;
+
    procedure Visit (Self : Wheel_Record; Visitor : Visitors.Visitor'Class) is
    begin
       Visitor.Visit_Wheel (Self);
