@@ -1,30 +1,28 @@
-pragma Ada_2022;
+private with Wheels;
 
-limited with Visitors;
-
-with Base;
 with Bodies;
 with Engines;
-with Wheels;
+with Vehicle_Elements;
 
 package Cars is
 
-   type Car_Record is new Base.Base_Record with private;
+   type Car is new Vehicle_Elements.Element with private;
 
-   procedure Accept_Visitor (Self : Car_Record; Whom : Visitors.Visitor'Class);
+   overriding procedure Accept_Visitor
+     (Self : in out Car; Visitor : Vehicle_Elements.Element_Visitor'Class);
 
-   function Initialize return Car_Record;
+   function Make return Car;
 
 private
 
-   type Wheel_Enum is (Left_Front, Right_Front, Left_Back, Right_Back);
+   type Wheel_Position is (Left_Front, Right_Front, Left_Back, Right_Back);
 
-   type Wheel_Array is array (Wheel_Enum) of Wheels.Wheel_Record;
+   type Wheel_Array is array (Wheel_Position) of Wheels.Wheel;
 
-   type Car_Record is new Base.Base_Record with record
-      Bod : Bodies.Body_Record;
-      Eng : Engines.Engine_Record;
-      Whs : Wheel_Array;
+   type Car is new Vehicle_Elements.Element with record
+      Car_Body   : Bodies.Car_Body;
+      Engine     : Engines.Engine;
+      All_Wheels : Wheel_Array;
    end record;
 
 end Cars;

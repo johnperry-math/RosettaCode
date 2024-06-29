@@ -1,20 +1,10 @@
-pragma Ada_2022;
-
-with Base;
-
-limited with Visitors;
+with Vehicle_Elements;
 
 package Engines is
 
-   type Engine_Record is new Base.Base_Record with private;
-
-   procedure Accept_Visitor
-     (Self : Engine_Record; Whom : Visitors.Visitor'Class);
-
-   procedure Visit (Self : Engine_Record; Visitor : Visitors.Visitor'Class);
-
-private
-
-   type Engine_Record is new Base.Base_Record with null record;
+   type Engine is new Vehicle_Elements.Element with null record;
+   function Make return Engine is
+     (Vehicle_Elements.Element (Vehicle_Elements.Make ("Engine")) with
+      null record);
 
 end Engines;

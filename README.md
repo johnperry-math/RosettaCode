@@ -12,6 +12,7 @@ outside Rosetta Code, it won't be here.
 * [Walsh matrix](https://rosettacode.org/wiki/Walsh_matrix#Ada)
 * [Weird numbers](https://rosettacode.org/wiki/Weird_numbers#Ada)
 * [Visitor pattern](https://rosettacode.org/wiki/Visitor_pattern#Ada)
+  - revised sigificantly, to be nearly identical to [Jere's approach](https://forum.ada-lang.io/t/rosetta-code-task-find-unimplemented-tasks/854/87?u=cantanima)
 
 ## Additional info
 

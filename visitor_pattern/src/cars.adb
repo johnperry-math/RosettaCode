@@ -1,34 +1,23 @@
 pragma Ada_2022;
 
-with Ada.Strings.Unbounded;
-
-with Visitors;
-
 package body Cars is
 
-   subtype Unbounded_String is Ada.Strings.Unbounded.Unbounded_String;
-   use all type Unbounded_String;
+   function Make return Car is
+     (Vehicle_Elements.Element (Vehicle_Elements.Make ("Car")) with
+      Car_Body   => Bodies.Make, Engine => Engines.Make,
+      All_Wheels =>
+        (for Wheel in Wheel_Position => Wheels.Make (Wheel'Image)));
 
-   procedure Accept_Visitor (Self : Car_Record; Whom : Visitors.Visitor'Class)
+   overriding procedure Accept_Visitor
+     (Self : in out Car; Visitor : Vehicle_Elements.Element_Visitor'Class)
    is
    begin
-      Whom.Visit_Car (Self);
-      Whom.Visit_Body (Self.Bod);
-      Whom.Visit_Engine (Self.Eng);
-      for Wheel of Self.Whs loop
-         Whom.Visit_Wheel (Wheel);
+      Vehicle_Elements.Element (Self).Accept_Visitor (Visitor);
+      Self.Car_Body.Accept_Visitor (Visitor);
+      Self.Engine.Accept_Visitor (Visitor);
+      for Wheel of Self.All_Wheels loop
+         Wheel.Accept_Visitor (Visitor);
       end loop;
    end Accept_Visitor;
-
-   function Initialize return Car_Record is
-      Result : Car_Record;
-   begin
-      Result.Whs :=
-        [Wheels.Initialize (To_Unbounded_String ("front left")),
-        Wheels.Initialize (To_Unbounded_String ("front right")),
-        Wheels.Initialize (To_Unbounded_String ("back left")),
-        Wheels.Initialize (To_Unbounded_String ("back right"))];
-      return Result;
-   end Initialize;
 
 end Cars;

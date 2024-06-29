@@ -1,31 +1,10 @@
-pragma Ada_2022;
-
-with Ada.Strings.Unbounded;
-
-with Base;
-
-limited with Visitors;
+with Vehicle_Elements;
 
 package Wheels is
 
-   subtype Unbounded_String is Ada.Strings.Unbounded.Unbounded_String;
-   use all type Unbounded_String;
-
-   type Wheel_Record is new Base.Base_Record with private;
-
-   procedure Accept_Visitor
-     (Self : Wheel_Record; Whom : Visitors.Visitor'Class);
-
-   procedure Visit (Self : Wheel_Record; Visitor : Visitors.Visitor'Class);
-
-   function Initialize (Name : Unbounded_String) return Wheel_Record;
-
-   function Name (Me : Wheel_Record) return Unbounded_String;
-
-private
-
-   type Wheel_Record is new Base.Base_Record with record
-      My_Name : Unbounded_String;
-   end record;
+   type Wheel is new Vehicle_Elements.Element with null record;
+   function Make (Name : String) return Wheel is
+     (Vehicle_Elements.Element (Vehicle_Elements.Make (Name & " Wheel")) with
+      null record);
 
 end Wheels;
