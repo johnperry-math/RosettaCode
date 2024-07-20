@@ -11,6 +11,7 @@ outside Rosetta Code, it won't be here.
 * [Upside-down numbers](https://rosettacode.org/wiki/Upside-down_numbers#Ada)
 * [Walsh matrix](https://rosettacode.org/wiki/Walsh_matrix#Ada)
 * [Weird numbers](https://rosettacode.org/wiki/Weird_numbers#Ada)
+* [Vibrating rectangles](https://rosettacode.org/wiki/Vibrating_rectangles#Ada)
 * [Visitor pattern](https://rosettacode.org/wiki/Visitor_pattern#Ada)
   - revised sigificantly, to be nearly identical to [Jere's approach](https://forum.ada-lang.io/t/rosetta-code-task-find-unimplemented-tasks/854/87?u=cantanima)
 

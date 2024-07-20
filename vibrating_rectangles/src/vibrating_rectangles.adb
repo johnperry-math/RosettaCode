@@ -3,7 +3,6 @@ pragma Ada_2022;
 pragma Extensions_Allowed (On);
 
 --  imports
-with Ada.Text_IO;
 with Rasters;
 
 procedure Vibrating_Rectangles is
@@ -32,7 +31,7 @@ begin
          --  Jth mod 2 = 0 draws every other rectangle
          for Jth in 1 .. Natural'Min (Ith, Dimension / 2) when Jth mod 2 = 0
          loop
-            --  this mildly complicated formula fades from the outermost rectangle in
+            --  this mildly complicated formula fades from outermost rectangle in
             Raster.Choose_Pen
               ((Red | Green => Integer'Max (0, 255 - (Ith - Jth + 1) * Step),
                 others => 255));
@@ -55,7 +54,6 @@ begin
       end if;
       --  save individual frames to combine into an animation
       declare
-         File      : IO.File_Type;
          Suffix    : String          := "_0000";
          --  appended to output filenames
          To_Suffix : constant String := Ith'Image;
@@ -68,9 +66,7 @@ begin
                  To_Suffix (Jth);
             end if;
          end loop;
-         IO.Create (File, IO.Out_File, "frame" & Suffix & ".ppm");
-         Raster.Save (File, R.PPM);
-         IO.Close (File);
+         Raster.Save ("frame" & Suffix & ".ppm", R.PPM);
       end;
    end loop;
 end Vibrating_Rectangles;
