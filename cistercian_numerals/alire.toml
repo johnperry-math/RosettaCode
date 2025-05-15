@@ -1,0 +1,10 @@
+name = "cistercian_numerals"
+description = "Cistercian Numerals in Ada for Rosetta Code"
+version = "0.1.0-dev"
+
+authors = ["John Perry"]
+maintainers = ["John Perry <devotus@yahoo.com>"]
+maintainers-logins = ["johnperry-math"]
+licenses = "CC-BY-SA-3.0"
+website = ""
+tags = ["rosetta", "code", "ada", "cistercian", "numerals"]
