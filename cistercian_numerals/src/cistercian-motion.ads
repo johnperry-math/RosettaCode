@@ -11,13 +11,14 @@ with Cistercian; use Cistercian;
 
 package Cistercian.Motion is
    type Start_Enum is (Near, Far);
-   --  whether the stroke starts at the near or far ordinate
+   --  whether the stroke starts near to or far from the center
 
    subtype Motion_Delta is Integer range -1 .. 1;
-   --  how the stroke moves across the image in this dimension
+   --  how the pen should step across the image in a given dimension
 
    type Motion_Record is record
-      --  record of a stroke's motion
+      --  record of a stroke's motion:
+      --  the location to start, as well as which direction to move
       Col_Start, Row_Start : Start_Enum;
       Col_Delta, Row_Delta : Motion_Delta;
    end record;
