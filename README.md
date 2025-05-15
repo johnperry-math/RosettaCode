@@ -6,6 +6,7 @@ outside Rosetta Code, it won't be here.
 
 ## Contents
 
+* [Cistercian numerals](https://rosettacode.org/wiki/Cistercian_numerals#Ada)
 * [Pascal Matrix generation](https://rosettacode.org/wiki/Pascal_matrix_generation#Ada)
 * [Ulam numbers](https://rosettacode.org/wiki/Ulam_numbers#Ada)
 * [Upside-down numbers](https://rosettacode.org/wiki/Upside-down_numbers#Ada)
@@ -18,4 +19,4 @@ outside Rosetta Code, it won't be here.
 ## Additional info
 
 My Rosetta Code user page is [here](https://rosettacode.org/wiki/User:Cantanima).
-It contains links to contributions I made with Modula-3.
+It contains links to contributions I made with Modula-3 as well as Ada.
