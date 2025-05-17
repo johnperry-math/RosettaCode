@@ -73,12 +73,18 @@ begin
       loop
          begin
             IO.Put ("What other value would you like to see? ");
+            IO.Put_Line ("(enter a negative number to stop) ");
+            IO.Put ("? ");
             User_Value := Integer'Value (IO.Get_Line);
             Cist_Ascii.Put (Cistercian.From (User_Value));
             IO.New_Line;
          exception
             when others =>
+               if User_Value < 0 then
+                  exit;
+               end if;
                IO.Put_Line ("Please enter a valid number from 0 to 9999.");
+               IO.Put ("? ");
          end;
       end loop;
    end;
